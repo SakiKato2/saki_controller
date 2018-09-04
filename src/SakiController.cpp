@@ -17,7 +17,7 @@ bool SakiController::run()
 {
   //std::cout << "waiting for the preparation" << std::endl;
   bool ret =  mc_control::MCController::run();
-  std::cout << timeStep << std::endl;
+  //std::cout << timeStep << std::endl;
   if(running == false) {
     return ret;
   }
@@ -65,7 +65,7 @@ void SakiController::reset(const mc_control::ControllerResetData & reset_data)
         "RARM_JOINT4",
         "RARM_JOINT5",
         "RARM_JOINT6"}); 
-  std::cout << "set_ef_pose start" << std::endl;
+    std::cout << "set_ef_pose start" << std::endl;
   ef_->set_ef_pose({
       Eigen::Quaterniond(0.56, -0.46, 0.55, -0.44),
             Eigen::Vector3d(0.21, -0.24, 0.97)});
